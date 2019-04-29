@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_introduction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/listener_introduction"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_id"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border_style"
+        android:gravity="center"
+        android:text="@string/id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_introduction" />
+
+    <TextView
+        android:id="@+id/textView_id_display"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="#0dccdc"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/textView_id"
+        app:layout_constraintTop_toBottomOf="@+id/textView_introduction" />
+
+    <TextView
+        android:id="@+id/textView_ismoving"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border_style"
+        android:gravity="center"
+        android:text="@string/ismoving"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_id" />
+
+    <TextView
+        android:id="@+id/textView_ismoving_display"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="#0dccdc"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/textView_ismoving"
+        app:layout_constraintTop_toBottomOf="@+id/textView_id_display" />
+
+    <TextView
+        android:id="@+id/textView_lightlux"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border_style"
+        android:gravity="center"
+        android:text="@string/lightlux"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ismoving" />
+
+    <TextView
+        android:id="@+id/textView_lightlux_display"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="#0dccdc"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/textView_lightlux"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ismoving_display" />
+
+    <TextView
+        android:id="@+id/textView_pressure"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border_style"
+        android:gravity="center"
+        android:text="@string/pressure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_lightlux" />
+
+    <TextView
+        android:id="@+id/textView_pressure_display"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="#0dccdc"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/textView_pressure"
+        app:layout_constraintTop_toBottomOf="@+id/textView_lightlux_display" />
+
+    <Switch
+        android:id="@+id/togglebtn"
+        android:layout_width="185dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:showText="true"
+        android:text="@string/listening_switch"
+        android:textAlignment="viewEnd"
+        android:textOff="@string/switch_off"
+        android:textOn="@string/switch_on"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_user_location"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/user_location_border"
+        android:gravity="center"
+        android:text="@string/user_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_pressure" />
+
+    <TextView
+        android:id="@+id/textView_location_x"
+        android:layout_width="20dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/location_x"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView_user_location"
+        app:layout_constraintTop_toBottomOf="@+id/textView_pressure" />
+
+    <TextView
+        android:id="@+id/textView_location_x_display"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:background="#0dccdc"
+        app:layout_constraintStart_toEndOf="@+id/textView_location_x"
+        app:layout_constraintTop_toBottomOf="@+id/textView_pressure" />
+
+    <TextView
+        android:id="@+id/textView_location_y"
+        android:layout_width="20dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/location_y"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView_user_location"
+        app:layout_constraintTop_toBottomOf="@+id/textView_user_location" />
+
+    <TextView
+        android:id="@+id/textView_location_y_display"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#0dccdc"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/textView_location_y"
+        app:layout_constraintTop_toBottomOf="@+id/textView_location_x" />
+
+    <TextView
+        android:id="@+id/textView_azimuth"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:background="@drawable/azimuth_border_style"
+        android:text="@string/azimuth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_location_y" />
+
+    <TextView
+        android:id="@+id/textView_azimuth_display"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:background="#0dccdc"
+        android:gravity="center"
+        android:text="@string/azimuth_display"
+        app:layout_constraintStart_toStartOf="@+id/textView_location_y"
+        app:layout_constraintTop_toBottomOf="@+id/textView_location_y" />
+
+</android.support.constraint.ConstraintLayout>

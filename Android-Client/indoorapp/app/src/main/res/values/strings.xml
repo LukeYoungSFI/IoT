@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Indoor app</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="user_position">X:  %1$s, Y:  %2$s</string>
+    <string name="sensor_data">ID:  %1$s   isMoving:  %2$b   LightLux:  %3$s    Pressure:  %4$s   </string>
+    <string name="listener_introduction">This Demo App is used to listen and display
+        telemetry data from the Estimote beacons and store the data to a MySQL database when an event is triggered</string>
+    <string name="id" textStyle="bold">Beacon ID</string>
+    <string name="ismoving">Moving</string>
+    <string name="lightlux">Light in Lux</string>
+    <string name="pressure">Pressure</string>
+    <string name="listening_switch">Start Listening</string>
+    <string name="switch_off">OFF</string>
+    <string name="switch_on">ON</string>
+    <string name="user_location">User Position</string>
+    <string name="location_x">X:</string>
+    <string name="location_y">Y:</string>
+    <string name="azimuth">Azimuth</string>
+    <string name="azimuth_display">unknown</string>
+</resources>

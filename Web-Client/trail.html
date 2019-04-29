@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Leaflet Realtime</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet-src.js"></script>
+    <script src="leaflet-realtime.js"></script>
+    <script src="trail.js"></script>
+	<script src="https://unpkg.com/esri-leaflet@2.1.4/dist/esri-leaflet.js"
+    integrity="sha512-m+BZ3OSlzGdYLqUBZt3u6eA0sH+Txdmq7cqA1u8/B2aTXviGMMLOfrKyiIW7181jbzZAY0u+3jWoiL61iLcTKQ=="
+    crossorigin=""></script>
+	<script>
+	//L.esri.basemapLayer('Streets').addTo(map);
+	L.esri.featureLayer({
+    url: 'http://spatial-desktop:6080/arcgis/rest/services/dev/IndoorMap/MapServer/0',
+	pointToLayer: function (geojson, latlng) {
+      return L.circleMarker(latlng, {color: 'green'});
+    }
+  }).addTo(map);
+  L.esri.featureLayer({
+    url: 'http://spatial-desktop:6080/arcgis/rest/services/dev/IndoorMap/MapServer/1',
+	style: function (feature) {
+      return {  color: 'red', weight: 3, fillOpacity: 0, fillColor: 'grey'  }}
+  }).addTo(map);
+  L.esri.featureLayer({
+    url: 'http://spatial-desktop:6080/arcgis/rest/services/dev/IndoorMap/MapServer/2',
+	style: function (feature) {
+      return {  color: 'yellow', weight: 3, fillOpacity: 0, fillColor: 'grey'  }}
+  }).addTo(map);
+	</script>
+</body>
+</html>
