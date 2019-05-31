@@ -103,7 +103,7 @@ class ListenActivity: AppCompatActivity() {
                         // write the x,y coordinates to MySQL database
                         textViewLocation_x.text = locationPosition.x.toString()
                         textViewLocation_y.text = locationPosition.y.toString()
-                        postUserLocation().execute(locationPosition.x.toString(), locationPosition.y.toString())
+                        //postUserLocation().execute(locationPosition.x.toString(), locationPosition.y.toString())
                         //check to see if x,y have been initialized, this block is for block-chain integration, temporarily disabled
 //                        if(user_location_x == 0.0) {
 //                            user_location_x = locationPosition.x
@@ -148,7 +148,7 @@ class ListenActivity: AppCompatActivity() {
 
         override fun doInBackground(vararg p0: String?): String {
             var Result = "";
-            val API_URL = "http://192.168.1.58:8088/saveAsset"
+            val API_URL = "http://192.168.1.48:8080/beaconHandler/addBeaconData"
 
             try {
                 //call http post to write telemetry data to MySQL database through a REST service
@@ -157,14 +157,15 @@ class ListenActivity: AppCompatActivity() {
                 //get the passed arguments to form a json data for post
                 val postData = ("{"
                         + "\"bid\":\""+p0[0]+"\","
-                        + "\"date_time\":\""+p0[4]+"\","
+                        + "\"dateTime\":\""+p0[4]+"\","
                         + "\"managed_by\":\"Jason_Ni\","
                         + "\"temperature\":"+p0[5]+","
                         + "\"light\":"+p0[3]+","
                         + "\"is_moving\":\""+p0[1]+"\","
                         + "\"transaction_type\":\"motion\","
-                        + "\"location_x\":12.1," // this x and y coordinate are just used for test
-                        + "\"location_y\":10.2,"
+                        + "\"floorLevel\":\"3\","
+                        + "\"locationX\":12.1," // this x and y coordinate are just used for test
+                        + "\"locationY\":10.2,"
                         + "\"pressure\":\""+p0[2]+"\""
                         + "}")
                 val postBody: ByteArray = postData.toByteArray(StandardCharsets.UTF_8)
